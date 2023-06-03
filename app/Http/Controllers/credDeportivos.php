@@ -2,29 +2,41 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\credDeportivo;
 use Illuminate\Http\Request;
 
 class credDeportivos extends Controller
 {
+    
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index($item)
+    public function index()
     {
+    
         $titulo = "Creditos deportivos";
-        return view('/modules/admin/estudiantes/creditosDeportivos', compact('titulo', 'item'));
+        $items = credDeportivo::all();
+        //credDeportivos::tomarValores($nombre, $paterno, $materno, $noDeControl);
+        return view('/modules/admin/estudiantes/creditosDeportivos', compact('titulo', 'items'));
     }
-
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($nombre,$paterno,$materno)
     {
-        //
+        $titulo = "Registro de codigo deportivo";
+        
+        
+        return view('/modules/admin/estudiantes/nuevoCredDeportivo', compact('titulo', 'nombre'));
+    }
+    public function almacenar(){
+        $titulo = 'Almacenando creditos deportivos';
+        
+
     }
 
     /**

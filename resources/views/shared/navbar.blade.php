@@ -17,10 +17,21 @@
                             width="40px" height="40px" alt=""></a>
                 </li>
                 <li class="nav-item mt-2">
-                    <a class="nav-link" href="{{route('registros')}}">Usuarios</a>
+                    <a class="nav-link" href="{{ route('registros') }}">Usuarios</a>
                 </li>
                 <li class="nav-item mt-2">
-                    <a class="nav-link" href="{{route('estudiantesIndex')}}">Estudiantes</a>
+                    <a class="nav-link" href="{{ route('estudiantesIndex') }}">Estudiantes</a>
+                </li>
+                <li class="nav-item dropdown mt-2">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Creditos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Civicos</a></li>
+                        <li><a class="dropdown-item" href="#">Culturales</a></li>
+                        <li><a class="dropdown-item" href="{{route('deportivos')}}">Deportivos</a></li>
+                    </ul>
                 </li>
                 <li class="nav-item mt-2">
                     <a class="nav-link" href="{{ route('logout') }}">Salir</a>

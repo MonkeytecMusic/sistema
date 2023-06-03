@@ -25,4 +25,5 @@ Route::delete('/admin/destroy/{id}',[Admins::class, 'destroy'])->name('destroy')
 Route::get('/admin/estudiantes/estudiantesRegistrados', [Estudiantes::class, 'index'])->name('estudiantesIndex');
 Route::get('/admin/estudiantes/nuevoEstudiante', [Estudiantes::class, 'create'])->name('nuevoEstudiante');
 Route::post('/admin/estudiantes/store', [Estudiantes::class, 'store']);
-Route::get('/admin/estudiantes/creditosDeportivos/{item}', [credDeportivos::class, 'index'])->name('deportivos');
+Route::get('/admin/estudiantes/creditosDeportivos', [credDeportivos::class, 'index'])->name('deportivos');
+Route::get('/admin/estudiantes/nuevoCredDeportivo/{nombre}/{paterno}/{materno}', [credDeportivos::class, 'create'])->name('nuevoCredDeportivo');

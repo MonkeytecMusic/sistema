@@ -19,9 +19,9 @@ class CreateCredDeportivoTable extends Migration
             $table->string('paternoAlumno');
             $table->string('maternoAlumno');
             $table->integer('NoDeControl');
-            $table->string('nombreArchivo');
-            $table->integer('hrsEvento');
-            $table->string('carpetaOficina');
+            $table->string('nombreArchivo')->nullable();
+            $table->integer('hrsEvento')->nullable();
+            $table->string('carpetaOficina')->nullable();
             $table->timestamps();
         });
     }

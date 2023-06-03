@@ -39,9 +39,9 @@
                                 <td>{{ $item->fechaNacimiento }}</td>
                                 <td>{{ $item->preparatoria }}</td>
                                 <td>{{ $item->ingresoITMA2 }}</td>
-                                <td><a href="{{ route('deportivos', $item) }}" class="btn btn-danger">{{$item->deportivos}}</a> Hrs. Registradas {{$item->hrsDeportivos}}</td>
-                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="btn btn-danger">{{$item->civicos}}</div> Hrs. Registradas {{$item->hrsCivicos}}</td>
-                                <td>&nbsp;<div class="btn btn-danger">{{$item->culturales}}</div> Hrs. Registradas {{$item->hrsCulturales}}</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
                             </tr>
                         @endforeach
                     </tbody>
