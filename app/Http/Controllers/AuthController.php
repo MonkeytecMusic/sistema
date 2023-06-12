@@ -18,7 +18,7 @@ class AuthController extends Controller
         return view('modules.auth.login');
     }
     public function logear(Request $request){
-        $credenciales = $request->only("name", "email", "user", "password");
+        $credenciales = $request->only("user", "password");
         if (Auth::attempt($credenciales)) {
             if (auth()->user()->rol == 'admin') {
                 return redirect()->route('admin_index');

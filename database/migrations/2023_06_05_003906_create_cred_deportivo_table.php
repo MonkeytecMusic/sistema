@@ -15,14 +15,13 @@ class CreateCredDeportivoTable extends Migration
     {
         Schema::create('cred_deportivo', function (Blueprint $table) {
             $table->id();
-            $table->string('nombreAlumno');
-            $table->string('paternoAlumno');
-            $table->string('maternoAlumno');
-            $table->integer('NoDeControl');
+            $table->string('mooc')->nullable();
             $table->string('nombreArchivo')->nullable();
-            $table->integer('hrsEvento')->nullable();
             $table->string('carpetaOficina')->nullable();
+            $table->unsignedBigInteger('estudiante_id');
+            $table->date('fechaRegistro');
             $table->timestamps();
+            $table->foreign('estudiante_id')->references("id")->on('estudiante');
         });
     }
 

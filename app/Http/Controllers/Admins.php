@@ -24,8 +24,6 @@ class Admins extends Controller
         return view('modules/admin/registroUsuario', compact('titulo','items'));
     }
 
-
-
     public function edit($id){
         $titulo = "Editar usuario";
         $items = User::find($id);
@@ -60,7 +58,6 @@ class Admins extends Controller
         $titulo = "Nuevo usuario";
         return view('modules/admin/nuevoUsuario', compact('titulo'));
     }
-
     public function store(Request $request)
     {
         $item = new User();
@@ -75,5 +72,4 @@ class Admins extends Controller
         $item->save();
         return redirect('/admin/registroUsuario');
     }
-
 }

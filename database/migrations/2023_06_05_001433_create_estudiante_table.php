@@ -18,18 +18,11 @@ class CreateEstudianteTable extends Migration
             $table->string('nombre');
             $table->string('paterno');
             $table->string('materno');
-            $table->integer('noDeControl');
             $table->integer('telefono');
             $table->string('carrera');
             $table->date('fechaNacimiento');
             $table->string('preparatoria');
             $table->date('ingresoITMA2');
-            $table->string('deportivos');
-            $table->integer('hrsDeportivos');
-            $table->string('civicos');
-            $table->integer('hrsCivicos');
-            $table->string('culturales');
-            $table->integer('hrsCulturales');
             $table->timestamps();
         });
     }

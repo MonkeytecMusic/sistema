@@ -22,14 +22,17 @@
                 <li class="nav-item mt-2">
                     <a class="nav-link" href="{{ route('estudiantesIndex') }}">Estudiantes</a>
                 </li>
+                <li class="nav-item mt-2">
+                    <a class="nav-link" href="{{ route('notas') }}">Notas</a>
+                </li>
                 <li class="nav-item dropdown mt-2">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                         data-bs-toggle="dropdown" aria-expanded="false">
                         Creditos
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><a class="dropdown-item" href="#">Civicos</a></li>
-                        <li><a class="dropdown-item" href="#">Culturales</a></li>
+                        <li><a class="dropdown-item" href="{{route('civicos')}}">Civicos</a></li>
+                        <li><a class="dropdown-item" href="{{route('culturales')}}">Culturales</a></li>
                         <li><a class="dropdown-item" href="{{route('deportivos')}}">Deportivos</a></li>
                     </ul>
                 </li>

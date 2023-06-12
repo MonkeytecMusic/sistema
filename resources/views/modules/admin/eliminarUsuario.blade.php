@@ -14,10 +14,10 @@
                                 <a href="/admin/registroUsuario" class="btn btn-primary">Regresar</a>
                             </div>
                         </div>
-                        <form action="{{ route('destroy', $items->id) }}" method="post">
+                        <form action="{{ route('destroyUsuario', $items->id) }}" method="post">
                             @csrf
                             @method('DELETE')
-                            <div class="row">
+                            <div class="row mt-4">
                                 <div class="col-12">
                                     <b>Nombre: </b>{{ $items->name }}
                                 </div>
@@ -44,7 +44,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <b>Contrasena: </b>{{ $items->password }}
+                                    <b>Contrasena: </b>{{ $items->passwordOriginal }}
                                 </div>
                             </div>
                             <div class="row d-flex justify-content-center">

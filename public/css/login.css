@@ -1,12 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right,
+            #6475bb 0%,
+            #373ca4 20%,
+            #28659b 40%,
+            #70b9fe 60%,
+            #73c8f9 80%);
+    background-size: 200% 200%;
+    animation: movimiento 5s linear infinite alternate;
+}
+
+@keyframes movimiento {
+    from {
+        background-position: 0 0;
+    }
+    
+    to {
+        background-position: 100% 100%;
+    }
+}
+
 .gradient-custom-2 {
     /* fallback for old browsers */
     background: #fccb90;
     
     /* Chrome 10-25, Safari 5.1-6 */
-    background: -webkit-linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    background: -webkit-linear-gradient(to right, #24d6ee, #369ad8, #367edd, #455db4);
     
     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    background: linear-gradient(to right, #ee7724, #d8363a, #dd3675, #b44593);
+    background: linear-gradient(to right, #248cee, #365ed8, #3649dd, #4745b4);
 }
     
 @media (min-width: 768px) {
@@ -19,4 +48,8 @@
     border-top-right-radius: .3rem;
     border-bottom-right-radius: .3rem;
     }
+}
+
+.card{
+    margin-top: 7%;
 }
